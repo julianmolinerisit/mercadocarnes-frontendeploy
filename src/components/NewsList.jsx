@@ -36,7 +36,7 @@ const NewsList = ({ newsList, admin }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/news/${id}`);
+      await axios.delete(`https://mercadocarnes-backend.onrender.com/api/news/${id}`);
       setUpdatedNewsList(updatedNewsList.filter((news) => news._id !== id));
       window.location.reload();
     } catch (err) {
